@@ -17,10 +17,12 @@ public class MeatBall : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space) && Alive)
+    {       if (Alive)
         {
-            birdBody.velocity = Vector2.up * flapStrength;
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+            {
+                birdBody.velocity = Vector2.up * flapStrength;
+            }
         }
     }
     void KillPlayer()
