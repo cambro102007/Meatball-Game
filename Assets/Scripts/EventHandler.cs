@@ -11,8 +11,12 @@ public class EventHandler : MonoBehaviour
     public int PlayerScore = 0;
     public void restartGame()
     {
-        SceneManager.UnloadSceneAsync("Game");
         SceneManager.LoadScene("Game");
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
     public void AddScore(int ScoreToAdd)
     {
